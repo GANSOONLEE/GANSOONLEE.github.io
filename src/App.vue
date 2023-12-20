@@ -1,13 +1,13 @@
 <template>
   <div class="text-center">
     <Navbar />
-    <HelloWorld msg="Hello Vue 3 + Vite" />
+    <Header />
   </div>
 </template>
 
 <script setup>
 import Navbar from './components/Navbar.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
 // Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
