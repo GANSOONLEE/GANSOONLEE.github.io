@@ -5,7 +5,7 @@
 
 <template>
 
-    <div class="flex justify-center mt-20 w-full">
+    <div class="flex justify-center mt-12 w-full h-[calc(100vh-7.2rem)]">
 
         <div class="flex flex-col justify-center w-auto h-auto">
             <img class="rounded-[100%] object-cover" src="../../public/profile.jpg" alt="profile-picture">
