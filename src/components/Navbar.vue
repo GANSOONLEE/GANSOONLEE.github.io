@@ -5,10 +5,10 @@
 
 <template>
 
-    <nav class="border-gray-600 bg-gray-800">
+    <nav class="border-gray-600 bg-gray-800 sticky top-0">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <a href="https://github.frankgan.com" class="flex items-center space-x-5 rtl:space-x-reverse">
-                <img src="../../public/transparent.png" class="h-12" alt="Flowbite Logo" />
+                <img src="../../public/img/transparent.webp" class="h-12" alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Frankgan</span>
             </a>
             <button id="navbar" data-collapse-toggle="mega-menu-full" type="button"

@@ -4,6 +4,11 @@
 
 @tailwind utilities;
 
+nav:hover{
+    cursor: url('../../public/cursor.cur'), auto;
+}
+
 .separator-vertical-line::before{
     content: '|';
 }
+
