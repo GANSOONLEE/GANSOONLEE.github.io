@@ -1,0 +1,38 @@
+name: Auto request after test
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Check if Main Branch is Locked
+      run: |
+        TOKEN=$GITHUB_TOKEN
+        REPO=${{ github.repository }}
+        BRANCH=${{ github.event.ref }}
+        TITLE="Automated Pull Request"
+        BODY="This pull request is automatically generated."
+
+        # Create a pull request
+        curl -X POST \
+          -H "Authorization: Bearer $TOKEN" \
+          -H "Content-Type: application/json" \
+          -d "{\"title\":\"$TITLE\",\"body\":\"$BODY\",\"head\":\"$BRANCH\",\"base\":\"main\"}" \
+          "https://api.github.com/repos/$REPO/pulls"
+    
