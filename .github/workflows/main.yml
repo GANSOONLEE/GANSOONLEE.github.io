@@ -30,7 +30,7 @@ jobs:
         BODY="This pull request is automatically generated."
 
         # Create a pull request
-        curl -L \ 
+        curl -L \
           -X POST \
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer TOKEN" \
