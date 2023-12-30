@@ -22,15 +22,6 @@ jobs:
       run: npm install
 
     - name: Create Request push to main
-      run: |
-        curl --request POST \
-          --url https://api.github.com/repos/${{ github.repository }}/pulls \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' \
-          --data ''{
-            "title": "Automated issue for commit: d23c8d794a3f685da831c86a7a2be9d5e5005379",
-            "body": "This issue was automatically created by the GitHub Action workflow **Auto request after test**. \n\n The commit hash was: _d23c8d794a3f685da831c86a7a2be9d5e5005379_."
-            "base": "main",  // Replace with your target branch
-            "head": "${{ github.head_ref }}"
-          }''\
-          --fail
+      run: gh pr create -B ${{ github.head_ref }} -H main --title 'Merge branch_to_merge into base_branch' --body 'Created by Github action'
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
