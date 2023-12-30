@@ -22,6 +22,6 @@ jobs:
       run: npm install
 
     - name: Create Request push to main
-      run: gh pr create -B ${{ github.head_ref }} -H main --title 'Merge branch_to_merge into base_branch' --body 'Created by Github action'
+      run: gh pr create -B "${{ github.head_ref }}" -H "main" --title 'Merge branch_to_merge into base_branch' --body 'Created by Github action'
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
