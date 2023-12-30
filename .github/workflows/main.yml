@@ -22,6 +22,6 @@ jobs:
       run: npm install
 
     - name: Create Request push to main
-      run: gh pr create --base main
+      run: gh pr create --base main -t "Auto PR" -b "Write your messages here"
       env:
         GH_TOKEN: ${{ github.token }}
