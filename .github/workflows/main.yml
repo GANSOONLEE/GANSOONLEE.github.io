@@ -21,9 +21,9 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Check if Main Branch is Locked
+    - name: Create Request push to main
       run: |
-        TOKEN=$GITHUB_TOKEN
+        TOKEN=${{ secrets.GITHUB_TOKEN }}
         REPO=${{ github.repository }}
         BRANCH=${{ github.event.ref }}
         TITLE="Automated Pull Request"
