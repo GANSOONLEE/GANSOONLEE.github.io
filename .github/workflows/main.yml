@@ -1,4 +1,4 @@
-name: Auto request after test
+name: Create PR after test
 
 on:
   push:
@@ -22,6 +22,6 @@ jobs:
       run: npm install
 
     - name: Create Request push to main
-      run: gh pr create --base main -t "Auto PR" -b "Write your messages here"
+      run: gh pr create --base main -t "PR" -b "Body"
       env:
         GH_TOKEN: ${{ github.token }}
