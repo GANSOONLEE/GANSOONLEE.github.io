@@ -1,0 +1,27 @@
+name: Auto request after test
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Create Request push to main
+      run: gh pr create --base main -t "Auto PR" -b "Write your messages here"
+      env:
+        GH_TOKEN: ${{ github.token }}
