@@ -30,5 +30,7 @@ jobs:
           --data ''{
             "title": "Automated issue for commit: d23c8d794a3f685da831c86a7a2be9d5e5005379",
             "body": "This issue was automatically created by the GitHub Action workflow **Auto request after test**. \n\n The commit hash was: _d23c8d794a3f685da831c86a7a2be9d5e5005379_."
+            "base": "main",  // Replace with your target branch
+            "head": "${{ github.head_ref }}"
           }''\
           --fail
