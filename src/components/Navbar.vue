@@ -5,7 +5,7 @@
 
 <template>
 
-    <nav class="border-gray-600 bg-gray-800 sticky top-0">
+    <nav class="border-gray-600 bg-gray-800 sticky top-0 z-10">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <a href="https://github.frankgan.com" class="flex items-center space-x-5 rtl:space-x-reverse">
                 <img src="../../public/img/transparent.webp" class="h-12" alt="Flowbite Logo" />
@@ -49,7 +49,7 @@
                 </ul>
             </div>
         </div>
-        <div id="targetEl" class="sticky  mt-1 hidden shadow-sm  md:border-y bg-gray-800 border-gray-600">
+        <div id="targetEl" class="sticky overflow-x-hidden` mt-1 hidden shadow-sm  md:border-y bg-gray-800 border-gray-600">
             <div class="bg-gray-800 md:fixed relative min-w-absoulute-full md:top-[4.2rem] grid max-w-screen-xl px-4 py-5 mx-auto text-white sm:grid-cols-2 md:px-6">
                 <ul>
                     <li>

@@ -4,20 +4,25 @@
   </div>
   <div class="text-center">
     <Navbar />
-    <Header />
-    <AboutMe />
+    <Header :age="calculatedAge" />
+    <AboutMe :age="calculatedAge" />
     <ContactMe />
     <Footer :year='new Date().getFullYear()' />
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue';
+
 import Navbar from './components/Navbar.vue'
 import Header from './components/Header.vue'
 import AboutMe from './components/AboutMe.vue'
 import ContactMe from './components/ContactMe.vue'
 import Footer from './components/Footer.vue'
 
+const calculatedAge = computed(() => {
+  return new Date().getFullYear() - 2004;
+});
 // This starter template is using Vue 3 experimental <script setup> SFCs
 // Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
