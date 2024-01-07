@@ -1,7 +1,7 @@
 
 <template>
     
-    <ol class="flex justify-between items-center flex-col gap-x-16 sm:flex-row">
+    <ol class="flex flex-wrap justify-between items-center flex-col gap-x-16 sm:flex-row">
         <li v-for="education in educations" class="relative flex-1 mb-6 sm:mb-0">
             <div class="flex items-center">
                 <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
@@ -59,6 +59,18 @@ const educations = ref([
         completionDate: '2021-11',
         schoolName: '巴生濱華中學高中部',
     },
+    {
+        educationLevel: '大學先修班',
+        admissionDate: '2024-02',
+        completionDate: '2024-06',
+        schoolName: '國立台灣師範大學僑生先修部',
+    },
+    // {
+    //     educationLevel: '大學',
+    //     admissionDate: '2024-09',
+    //     completionDate: '2028-09',
+    //     schoolName: '國立XX大學',
+    // }
 ])
 
 </script>

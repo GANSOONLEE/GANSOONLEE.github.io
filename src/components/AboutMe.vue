@@ -12,7 +12,7 @@
         <div class="flex flex-col lg:flex-row">
     
             <!-- About Me -->
-            <div class="">
+            <!-- <div class="">
     
                 <ul class="w-[22rem] sm:w-[28rem]">
                     <li class="text-sm sm:text-lg flex flex-col lg:flex-row text-start py-2 text-white">
@@ -37,7 +37,7 @@
                     </li>
                 </ul>
     
-            </div>
+            </div> -->
 
             <!-- Timeline -->
             <div class="px-16 py-4 z-[1] w-full">
