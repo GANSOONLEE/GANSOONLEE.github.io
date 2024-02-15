@@ -17,8 +17,10 @@
                 </h2>
                 <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
                     於 {{ formatDate(education.admissionDate) }} 入學
-                    <!-- 至
-                    於 {{ formatDate(education.completionDate) }} 結業 -->
+                    <span v-if="education.completionDate !== null">
+                        至
+                        於 {{ formatDate(education.completionDate) }} 結業
+                    </span>
                 </time>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-300">
                     {{ education.schoolName }}
@@ -61,7 +63,7 @@ const educations = ref([
     {
         educationLevel: '大學先修班',
         admissionDate: '2024-02',
-        completionDate: '2024-06',
+        completionDate: null,
         schoolName: '國立台灣師範大學僑生先修部',
     },
     // {

@@ -11,7 +11,7 @@
 
         <!-- 學歷 -->
         <div> 
-            <h3 class="text-xl text-slate-400 mt-1 mb-3 sm:mb-8">學歷 Euducation</h3>
+            <h3 class="text-2xl text-slate-300 my-3 sm:mb-8">學歷 Euducation</h3>
             <div class="flex flex-col lg:flex-row">
                 <!-- Timeline -->
                 <div class="px-16 py-4 z-[1] w-full">
@@ -22,7 +22,7 @@
 
         <!-- 證書 -->
         <div> 
-            <h3 class="text-xl text-slate-400 mt-1 mb-3 sm:mb-8">證書 Cetrificate</h3>
+            <h3 class="text-2xl text-slate-300 my-3 sm:mb-8">證書 Cetrificate</h3>
             <div class="flex flex-col lg:flex-row">
                 <!-- Diploma -->
                 <div class="px-16 py-4 z-[1] w-full">
