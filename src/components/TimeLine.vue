@@ -11,15 +11,14 @@
                 </div>
                 <div class="sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-500"></div>
             </div>
-            <div class="mt-1">
+            <div class="mt-2 md:mt-4">
                 <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    <img src="img/graduation-cap.svg" alt="">
                     {{ education.educationLevel }}
                 </h2>
                 <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
                     於 {{ formatDate(education.admissionDate) }} 入學
-                    至
-                    於 {{ formatDate(education.completionDate) }} 結業
+                    <!-- 至
+                    於 {{ formatDate(education.completionDate) }} 結業 -->
                 </time>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-300">
                     {{ education.schoolName }}

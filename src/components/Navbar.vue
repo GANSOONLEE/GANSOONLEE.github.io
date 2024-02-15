@@ -49,8 +49,8 @@
                 </ul>
             </div>
         </div>
-        <div id="targetEl" class="sticky overflow-x-hidden` mt-1 hidden shadow-sm  md:border-y bg-gray-800 border-gray-600">
-            <div class="bg-gray-800 md:fixed relative min-w-absoulute-full md:top-[4.2rem] grid max-w-screen-xl px-4 py-5 mx-auto text-white sm:grid-cols-2 md:px-6">
+        <div id="targetEl" class="sticky overflow-x-hidden mt-1 hidden shadow-sm md:border-y bg-gray-800 border-gray-600">
+            <div class="bg-gray-800 md:fixed relative md:top-[4.2rem] grid px-4 py-5 mx-auto text-white sm:grid-cols-2 md:px-6">
                 <ul>
                     <li>
                         <a href="#" class="block p-3 rounded-lg hover:bg-gray-700">
