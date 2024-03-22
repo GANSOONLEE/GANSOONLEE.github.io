@@ -21,15 +21,15 @@
         </div>
 
         <!-- 證書 -->
-        <div> 
+        <!-- <div> 
             <h3 class="text-2xl text-slate-300 my-3 sm:mb-8">證書 Cetrificate</h3>
             <div class="flex flex-col lg:flex-row">
-                <!-- Diploma -->
+                
                 <div class="px-16 py-4 z-[1] w-full">
                     <Diploma />
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -37,7 +37,7 @@
 
 <script setup>
 import TimeLine from './TimeLine.vue';
-import Diploma from './Diploma.vue';
+// import Diploma from './Diploma.vue';
 
 defineProps({
     age: Number

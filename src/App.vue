@@ -6,6 +6,7 @@
     <Navbar />
     <Header :age="calculatedAge" />
     <AboutMe :age="calculatedAge" />
+    <Jobs />
     <ContactMe />
     <Footer :year='new Date().getFullYear()' />
   </div>
@@ -17,6 +18,7 @@ import { computed } from 'vue';
 import Navbar from './components/Navbar.vue'
 import Header from './components/Header.vue'
 import AboutMe from './components/AboutMe.vue'
+import Jobs from './components/Jobs.vue'
 import ContactMe from './components/ContactMe.vue'
 import Footer from './components/Footer.vue'
 
