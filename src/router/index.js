@@ -13,37 +13,62 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        title: '首頁',
+      },
     },
     {
       path: '/about',
       name: 'about',
       component: AboutView,
+      meta: {
+        title: '關於',
+      },
     },
     {
       path: '/portfolio',
       name: 'portfolio',
       component: PortfolioView,
+      meta: {
+        title: '作品集',
+      },
     },
     {
       path: '/contact',
       name: 'contact',
       component: ContactView,
+      meta: {
+        title: '聯絡我',
+      },
     },
     {
       path: '/cooperate',
       name: 'cooperate',
       component: CooperateView,
+      meta: {
+        title: '合作機會',
+      },
     },
     {
       path: '/404',
       name: 'not-found',
       component: NotFoundView,
+      meta: {
+        title: '找不到頁面',
+      },
     },
     {
       path: '/:catchAll(.*)',
       redirect: '/404',
     },
   ],
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
 })
 
 export default router

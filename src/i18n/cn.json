@@ -1,1 +1,25 @@
-{}
+{
+  "language": {
+    "zh": "繁体中文",
+    "en": "英语",
+    "cn": "简体中文"
+  },
+  "navbar": {
+    "home": "首页",
+    "about": "关于",
+    "portfolio": "作品集",
+    "contact": "联络我",
+    "cooperate": "合作机会"
+  },
+  "footer": {
+    "title": "页脚",
+    "link": "全站连结",
+    "home": "首页",
+    "about": "关于",
+    "portfolio": "作品集",
+    "contact": "联络我",
+    "cooperate": "合作机会",
+    "photography": "摄影",
+    "web-design": "网页设计"
+  }
+}

@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <h2>你好 我叫阿循</h2>
+  </div>
 </template>
+
+<style lang="scss" scoped></style>

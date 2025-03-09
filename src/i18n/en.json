@@ -1,1 +1,25 @@
-{}
+{
+  "language": {
+    "zh": "Traditional Chinese",
+    "en": "English",
+    "cn": "Simplified Chinese"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "cooperate": "Cooperate"
+  },
+  "footer": {
+    "title": "Footer",
+    "link": "Links",
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "cooperate": "Cooperate",
+    "photography": "Photography",
+    "web-design": "Web Design"
+  }
+}
