@@ -79,7 +79,7 @@ nav {
   position: sticky;
   top: 0;
   padding: 1rem;
-  background: #d4d0dc;
+  background: #343238;
   box-shadow: 0 2px 4px rgba(36, 36, 59, 0.1);
   ul.links {
     display: flex;
@@ -87,8 +87,10 @@ nav {
     align-items: center;
     column-gap: 1.4rem;
     a {
+      color: #00ff8c;
       transition: color 0.12s ease-in-out;
       &:hover {
+        color: #00b664;
       }
     }
   }
@@ -139,29 +141,11 @@ nav {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  nav {
-    background: #343238;
-    ul.links {
-      color: #00ff8c;
-      a {
-        transition: color 0.12s ease-in-out;
-        &:hover {
-          color: #00b664;
-        }
-      }
-    }
-  }
-  i.menu-button {
-    color: #00ff8c;
-  }
-}
-
 @media screen and (max-width: '768px') {
   nav {
     ul.links {
       width: 100%;
-      background: #4f4c54;
+      background: #2b282e;
       position: absolute;
       left: -100%;
       top: 100%;
@@ -175,7 +159,7 @@ nav {
         width: 100%;
         text-align: center;
         &:hover {
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(0, 0, 0, 0.3);
         }
       }
     }
@@ -183,6 +167,7 @@ nav {
       display: block;
       width: min-content;
       cursor: pointer;
+      color: #00ff8c;
     }
   }
 }
