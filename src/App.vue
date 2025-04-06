@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import AlertBox from '@/components/AlertBox.vue'
 import NavbarItem from '@/components/NavbarItem.vue'
 import FooterItem from '@/components/FooterItem.vue'
 </script>
 
 <template>
+  <AlertBox />
   <header>
     <div class="wrapper">
       <NavbarItem />
@@ -18,6 +20,7 @@ import FooterItem from '@/components/FooterItem.vue'
 
 <style lang="scss" scoped>
 header {
+  z-index: 1000;
   position: sticky;
   top: 0;
 }

@@ -3,6 +3,13 @@ import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
+import { useAlertStore } from '@/stores/alert.ts'
+const alertStore = useAlertStore()
+
+const cooperateUnavailable = () => {
+  alertStore.showAlertMessage('warning', '目前業務繁忙，暫不開放合作機會！', 7)
+}
+
 const isMenuOpen = ref(false)
 const { availableLocales, locale } = useI18n()
 
@@ -38,6 +45,8 @@ onMounted(() => {
 })
 
 const handleChangeLocale = (newLocale: string) => {
+  document.body.classList.remove(...availableLocales)
+  document.body.classList.add(newLocale)
   locale.value = newLocale
   setLocaleInCookie(newLocale)
   selectedLocale.value = newLocale
@@ -52,7 +61,9 @@ const handleChangeLocale = (newLocale: string) => {
       <RouterLink to="/about">{{ $t('navbar.about') }}</RouterLink>
       <RouterLink to="/portfolio">{{ $t('navbar.portfolio') }}</RouterLink>
       <RouterLink to="/contact">{{ $t('navbar.contact') }}</RouterLink>
-      <RouterLink to="/cooperate">{{ $t('navbar.cooperate') }}</RouterLink>
+      <RouterLink to="/cooperate" @click.prevent="cooperateUnavailable">{{
+        $t('navbar.cooperate')
+      }}</RouterLink>
     </ul>
     <div class="language-dropdown">
       <button @click="isDropdownOpen = !isDropdownOpen">
@@ -120,9 +131,9 @@ nav {
   }
   .language-dropdown {
     position: absolute;
-    right: 1rem;
+    right: 0;
     top: 0;
-    padding: 1rem;
+    padding: 0.8rem;
     button {
       background: none;
       cursor: pointer;

@@ -2,10 +2,21 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
+import { useAlertStore } from '@/stores/alert.ts'
+const alertStore = useAlertStore()
+
 const currentYear = ref(new Date().getFullYear())
 
 const copyDiscordId = async () => {
   await navigator.clipboard.writeText('axun0402')
+}
+
+const handleUnavailable = () => {
+  alertStore.showAlertMessage('error', '這個功能未開放，敬請期待！')
+}
+
+const cooperateUnavailable = () => {
+  alertStore.showAlertMessage('warning', '目前業務繁忙，暫不開放合作機會！', 7)
 }
 </script>
 
@@ -20,7 +31,9 @@ const copyDiscordId = async () => {
           <RouterLink to="/about">{{ $t('navbar.about') }}</RouterLink>
           <RouterLink to="/portfolio">{{ $t('navbar.portfolio') }}</RouterLink>
           <RouterLink to="/contact">{{ $t('navbar.contact') }}</RouterLink>
-          <RouterLink to="/cooperate">{{ $t('navbar.cooperate') }}</RouterLink>
+          <RouterLink to="/cooperate" @click.prevent="cooperateUnavailable">{{
+            $t('navbar.cooperate')
+          }}</RouterLink>
         </ul>
       </div>
       <div class="column">
@@ -51,8 +64,12 @@ const copyDiscordId = async () => {
       <div class="column">
         <h3>{{ $t('footer.portfolio') }}</h3>
         <ul>
-          <a target="_blank" href="">{{ $t('footer.photography') }}</a>
-          <a target="_blank" href="">{{ $t('footer.web-design') }}</a>
+          <a target="_blank" @click.prevent="handleUnavailable" class="disabled" href="#">{{
+            $t('footer.photography')
+          }}</a>
+          <a target="_blank" @click.prevent="handleUnavailable" class="disabled" href="#">{{
+            $t('footer.web-design')
+          }}</a>
         </ul>
       </div>
     </section>
@@ -88,6 +105,10 @@ footer {
         a {
           width: max-content;
           color: #aaa;
+          &.disabled {
+            cursor: not-allowed;
+            color: #666;
+          }
           &:hover {
             color: #fff;
           }
